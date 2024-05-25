@@ -11,6 +11,3 @@ browser.find_element(By.NAME,'Email').send_keys('dicky123@gmail.com')
 browser.find_element(By.NAME,'Password').send_keys('123456789')
 browser.find_element(By.NAME,'ConfirmPassword').send_keys('123456789')
 browser.find_element(By.NAME,'register-button').click()
-
-browser.get('https://demowebshop.tricentis.com/registerresult/1')
-browser.find_element(By.CLASS_NAME,'button').click()
