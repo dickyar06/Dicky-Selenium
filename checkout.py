@@ -21,15 +21,30 @@ class demowebshopTest(unittest.TestCase):
         browser.find_element(By.XPATH,'//input[@id="termsofservice"]').click()
         browser.find_element(By.XPATH,'//button[@id="checkout"]').click()
 
-        browser.find_element(By.NAME,'BillingNewAddress.Company').send_keys('warkop')
+        browser.find_element(By.XPATH,'//input[@id="BillingNewAddress_FirstName"]').send_keys('dinda')
+        browser.find_element(By.XPATH,'//input[@id="BillingNewAddress_LastName"]').send_keys('intan')
+        browser.find_element(By.XPATH,'//input[@id="BillingNewAddress_Email"]').send_keys('intandinda@gmail.com')
+        browser.find_element(By.NAME,'BillingNewAddress.Company').send_keys('warkodjan')
         browser.find_element(By.NAME,'BillingNewAddress.City').send_keys('bandung')
         browser.find_element(By.NAME,'BillingNewAddress.Address1').send_keys('bandung jawabarat')
         browser.find_element(By.NAME,'BillingNewAddress.CountryId').send_keys('indonesia')
         browser.find_element(By.NAME,'BillingNewAddress.ZipPostalCode').send_keys('40233')
-        browser.find_element(By.NAME,'BillingNewAddress.PhoneNumber').send_keys('081233444909')
+        browser.find_element(By.NAME,'BillingNewAddress.PhoneNumber').send_keys('081233477909')
         
         browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[1]/div[2]/div[1]/input[1]').click()
-        
+        browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[2]/div[2]/div[1]/input[1]').click()
+
+        browser.find_element(By.XPATH,'//input[@id="shippingoption_1"]').click()
+        browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[3]/div[2]/form[1]/div[2]/input[1]').click()
+
+        browser.find_element(By.CSS_SELECTOR,'#paymentmethod_0').click()
+        browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[4]/div[2]/div[1]/input[1]').click()
+
+        browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[4]/div[2]/div[1]/input[1]').click()
+
+        browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[6]/div[2]/div[2]/input[1]').click()
+       
+        browser.find_element(By.XPATH,'//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[6]/div[2]/div[2]/input[1]').click()
         webdriver.Chrome().close
 
 if __name__ == '__main__':
